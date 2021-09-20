@@ -11,6 +11,8 @@
 	{% block content %}
 	<div class ='container'>		
 		<h1>{{msg}}</h1>
+		<a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
+
 	</div>
 	{% endblock content %}
 	
