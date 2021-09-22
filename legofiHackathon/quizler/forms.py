@@ -8,4 +8,8 @@ class StudentForm(ModelForm):
         #take up all the fields 
         fields="__all__"
         
-        
+class LanguageForm(ModelForm):
+    class Meta:
+        model=Language
+        #the fields will be check boxes 
+        fields="__all__"        
