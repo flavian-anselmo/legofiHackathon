@@ -13,7 +13,10 @@
 	<div class="container">
 	<form  method="POST">
 		{% csrf_token %}
-		{{form}}
+		{{student}}
+		<p>choose language </p>
+		{{language}}
+		<p></p>
 		<input type = "submit" value = "Submit">
 	</form>
 	    

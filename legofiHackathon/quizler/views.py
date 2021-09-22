@@ -12,12 +12,17 @@ def index(request):
 def register(request):
   #move the user to the registration form 
   context={}
-  form =StudentForm(request.POST)
+  form_student =StudentForm(request.POST)
+  form_language=LanguageForm(request.POST)
+  
   if request.method == 'GET':
-    context['form']=form
+    context['student']=form_student
+    context['language']=form_language
     return render(request,'register.html',context)
   elif request.method=='POST':
-    if form.is_valid():
-      form.save()
+    if form_student.is_valid() and form_language.is_valid():
+      #if both the forms are valid save the data 
+      form_language.save()
+      form_student.save()
       return render(request,'confirm.html',context)
   
