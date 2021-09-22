@@ -9,18 +9,19 @@
 <body>
 	{% extends 'base.html' %}
 	{% block content  %}
-	<h2>register</h2>
+	<h2 class="text-center">register</h2>
 	<div class="container">
-	<form  method="POST">
+	<form  method="POST" class="form-group">
 		{% csrf_token %}
 		{{student}}
-		<p>choose language </p>
-		{{language}}
-		<p></p>
+		<p>choose language</p>
+		<div class="custom-control custom-checkbox">
+				{{language}}
+			
+		</div>
+		
 		<input type = "submit" value = "Submit">
 	</form>
-	    
-
 	</div>
 	
 	{% endblock content  %}
